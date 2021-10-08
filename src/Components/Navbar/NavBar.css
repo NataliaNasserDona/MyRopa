@@ -1,0 +1,20 @@
+.logo{
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.nav{
+    display: flex;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    height: 8vh;
+    min-height: 4.6rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color:#a757e9;
+}
+
+.buscar{
+    text-align: right;
+}
