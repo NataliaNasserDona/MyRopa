@@ -1,13 +1,14 @@
 
 import './NavBar.css'
 import logot from "../../assets/img/logo.jpg"
+import CartWidget from '../CartWidget/CartWidget.js';
 
 const NavmyRopa = () => {
     return <>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            
-                <img src={logot} className='appLogo logo' alt='logo'/>
-            
+
+            <img src={logot} className='appLogo logo' alt='logo' />
+
             <div class="container-fluid">
                 <a class="navbar-brand" href="dangerouslySetInnerHTML">MyRopa</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,12 +35,11 @@ const NavmyRopa = () => {
                                 <li><a class="dropdown-item" href="dangerouslySetInnerHTML">Accesorios</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">$0</a>
-                        </li>
                     </ul>
                 </div>
             </div>
+            
+            <CartWidget />
         </nav>
     </>;
 }
