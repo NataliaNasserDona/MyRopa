@@ -1,12 +1,12 @@
 import carro from '../../assets/img/carro.png'
 import './CartWidget.css'
 
-const CartWidget = () => {
+const CartWidget = ({count}) => {
     return <>
         <div className="posicion">
             <label className="precio">$0</label>
             <img src={carro} className='tamCarro' alt='imgCarro' />
-            <label className="cant">2</label>
+            <label className="cant">{count}</label>
         </div>
     </>
 }

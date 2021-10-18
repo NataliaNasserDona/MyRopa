@@ -1,0 +1,19 @@
+.botones{
+    
+}
+
+.centrar{
+    justify-content: center;
+    display: flex; 
+    flex-direction: column;
+}
+
+.fa{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.pad{
+    padding: 0;
+}
