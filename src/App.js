@@ -1,21 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import NavBar from './Components/Navbar/NavBar.js'; 
+import NavBar from './Components/Navbar/NavBar.js';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer.js'
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 
 function App() {
-  const [count, setCount] = useState(0);
+
+  const [contador, setContador] = useState(0);
+
   return (
     <div className="App">
       <header>
-        <NavBar count={count}/>
+        <NavBar contador={contador}/>
       </header>
       <main>
-      <ItemListContainer count={count} setCount = {setCount}/>
+        <ItemListContainer setContador={setContador}/>
       </main>
     </div>
   );

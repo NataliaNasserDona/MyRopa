@@ -3,7 +3,7 @@ import './NavBar.css'
 import logot from "../../assets/img/logo.jpg"
 import CartWidget from '../CartWidget/CartWidget.js';
 
-const NavmyRopa = ({count}) => {
+const NavmyRopa = ({contador}) => {
     return <>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -38,7 +38,7 @@ const NavmyRopa = ({count}) => {
                     </ul>
                 </div>
             </div>
-            <CartWidget  count={count}/>
+            <CartWidget  contador={contador}/>
         </nav>
     </>;
 }

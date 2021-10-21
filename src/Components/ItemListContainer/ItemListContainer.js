@@ -1,12 +1,19 @@
 import ItemCount from "../ItemCount/ItemCount"
 
-const ItemListContainer = ({count, setCount}) => {
-    return <> 
+const ItemListContainer = ({setContador}) => {
+
+    const onAdd = (numero) => {
+        setContador(numero);
+    };
+
+    return (<>
         <h1>Bienvenido a MyRopa</h1>
         <h2>En Proceso...</h2>
 
-        <ItemCount count={count} setCount = {setCount} stock='5' />
-    </>
+        <ItemCount stock='5' onAdd = {onAdd}/>
+    </>)
 }
+
+
 
 export default ItemListContainer
