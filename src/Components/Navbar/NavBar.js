@@ -1,11 +1,10 @@
-
 import './NavBar.css'
 import logot from "../../assets/img/logo.jpg"
 import CartWidget from '../CartWidget/CartWidget.js';
 
 const NavmyRopa = ({contador}) => {
     return <>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav">
 
             <img src={logot} className='appLogo logo' alt='logo' />
 

@@ -1,4 +1,29 @@
 .todos{
-    justify-content: center;
+    width: 16rem;
+    height: 24rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
+    border: 5px groove #ad63df;
+    border-radius: 5px;
+    flex-shrink: 1;
+}
+
+.btnDetalles{
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    padding-right: 1rem;
+    font-size: 13px;
+    height: 1.5rem;
+    width: 5rem;
+    margin-top: 1rem;
+    background: #eb94d0;
+    background-image: -moz-linear-gradient(top, #eb94d0, #5419b3);
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
+    font-style: oblique;
 }
