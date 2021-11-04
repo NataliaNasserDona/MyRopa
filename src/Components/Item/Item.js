@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom"
 import "./Item.css"
+import ItemList from "../ItemList/ItemList"
 
-const Item = ({ products }) => {
+const Item = ({ products, prod }) => {
 
     return <div className="row col col-sm-3"> 
         <div className="row todos">

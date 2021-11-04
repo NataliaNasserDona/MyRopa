@@ -1,43 +1,43 @@
 import './NavBar.css'
 import logot from "../../assets/img/logo.jpg"
 import CartWidget from '../CartWidget/CartWidget.js';
+import Categoria from "../../assets/Categorias/Categoria.js"
+import { NavLink, Link } from 'react-router-dom';
 
-const NavmyRopa = ({contador}) => {
+const NavmyRopa = ({ contador }) => {
+
     return <>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light nav">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light nav">
 
-            <img src={logot} className='appLogo logo' alt='logo' />
+            <Link to={`/`} className="btn"><img src={logot} className='appLogo logo' alt='logo' /></Link>
 
-            <div class="container-fluid">
-                <a class="navbar-brand" href="dangerouslySetInnerHTML">MyRopa</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="dangerouslySetInnerHTML">Home</a>
+            <div className="container-fluid">
+                <NavLink to={`/`} className="btn"><b>MyRopa</b></NavLink>
+                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <NavLink to={`/sucursales`} className="btn"><b>Sucursales</b></NavLink>
+                           
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="dangerouslySetInnerHTML">Sucursales</a>
+                        <li className="nav-item">
+                            <NavLink to={`/contacto`} className="btn"><b>Contacto</b></NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="dangerouslySetInnerHTML">Contacto</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="dangerouslySetInnerHTML" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="dangerouslySetInnerHTML" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Menú
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="dangerouslySetInnerHTML">Remeras</a></li>
-                                <li><a class="dropdown-item" href="dangerouslySetInnerHTML">Pantalones</a></li>
-                                <li><a class="dropdown-item" href="dangerouslySetInnerHTML">Accesorios</a></li>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                {Categoria.map(categ =>
+                                    <NavLink to={`/category/${categ.categoria}`} key={categ.id} className="dropdown-item" >
+                                        <li>{categ.categoria}</li>
+                                    </NavLink>)
+                                }
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
-            <CartWidget  contador={contador}/>
+            <CartWidget contador={contador} />
         </nav>
     </>;
 }

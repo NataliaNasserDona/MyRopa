@@ -16,14 +16,16 @@ function App() {
     <div className="App">
       <BrowserRouter> 
         <header>
-        <NavBar contador={contador}/>
+        <NavBar contador={contador}>
+        </NavBar>
       </header>
       <main>
         <Switch> 
           <Route exact path='/item/:id'>
             <ItemDetailContainer setContador={setContador}/>
           </Route>
-          <Route exact path='/' component={ItemListContainer}/>        
+          <Route exact path='/' component={ItemListContainer}/>  
+          <Route exact path= '/category/:categoria' component={ItemListContainer}/>    
         </Switch>
       </main>
       </BrowserRouter>
