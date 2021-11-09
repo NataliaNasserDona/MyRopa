@@ -6,6 +6,7 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer.
 import React, { useState } from 'react';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Cart from './Components/Cart/Cart.js'
 
 
 function App() {
@@ -22,10 +23,11 @@ function App() {
       <main>
         <Switch> 
           <Route exact path='/item/:id'>
-            <ItemDetailContainer setContador={setContador}/>
+            <ItemDetailContainer setContador={setContador} contador={contador}/>
           </Route>
           <Route exact path='/' component={ItemListContainer}/>  
-          <Route exact path= '/category/:categoria' component={ItemListContainer}/>    
+          <Route exact path= '/category/:categoria' component={ItemListContainer}/> 
+          <Route exact path= '/Cart' component={Cart}></Route>   
         </Switch>
       </main>
       </BrowserRouter>

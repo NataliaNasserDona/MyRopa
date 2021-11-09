@@ -4,7 +4,7 @@ import CartWidget from '../CartWidget/CartWidget.js';
 import Categoria from "../../assets/Categorias/Categoria.js"
 import { NavLink, Link } from 'react-router-dom';
 
-const NavmyRopa = ({ contador }) => {
+const NavmyRopa = ({ contador, setContador }) => {
 
     return <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light nav">
@@ -17,7 +17,6 @@ const NavmyRopa = ({ contador }) => {
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <NavLink to={`/sucursales`} className="btn"><b>Sucursales</b></NavLink>
-                           
                         </li>
                         <li className="nav-item">
                             <NavLink to={`/contacto`} className="btn"><b>Contacto</b></NavLink>
@@ -26,7 +25,7 @@ const NavmyRopa = ({ contador }) => {
                             <a className="nav-link dropdown-toggle" href="dangerouslySetInnerHTML" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Menú
                             </a>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <ul className="dropdown-menu itemsMenu" aria-labelledby="navbarDropdownMenuLink">
                                 {Categoria.map(categ =>
                                     <NavLink to={`/category/${categ.categoria}`} key={categ.id} className="dropdown-item" >
                                         <li>{categ.categoria}</li>
@@ -37,7 +36,7 @@ const NavmyRopa = ({ contador }) => {
                     </ul>
                 </div>
             </div>
-            <CartWidget contador={contador} />
+            <CartWidget contador={contador} setContador={setContador}/>
         </nav>
     </>;
 }

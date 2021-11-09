@@ -1,32 +1,32 @@
-import {useState, useEffect} from "react";
-import {useParams} from "react-router";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import { productos } from "../../assets/Productos/Productos";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-const ItemDetailContainer = ({setContador}) => {
+const ItemDetailContainer = ({ setContador, contador }) => {
     const [ropa, setRopa] = useState([])
-    const {id} = useParams()
+    const { id } = useParams()
 
     useEffect(() => {
         const list = new Promise((resolve, reject) => {
-            setTimeout(() =>{
+            setTimeout(() => {
                 resolve(productos)
             }, 2000)
         });
 
-        list.then(list => {     //cada objeto del array de los productos
-                const newDetail = list.find(ropa => ropa.id === id)
-                  
-                setRopa(newDetail)
-                },
-                   
-            );
+list.then(list => {     //cada objeto del array de los productos
+    const newDetail = list.find(ropa => ropa.id === id)
+
+    setRopa(newDetail)
+},
+
+);
     }, [id]);
 
 
-    return <>
-    <ItemDetail ropa={ropa} setContador={setContador}/>
-    </>
+return <>
+    <ItemDetail ropa={ropa} setContador={setContador} contador={contador} />
+</>
 
 }
 

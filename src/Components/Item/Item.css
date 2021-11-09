@@ -1,3 +1,8 @@
+.centrar{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .todos{
     width: 16rem;
     height: 24rem;
@@ -20,10 +25,19 @@
     font-size: 13px;
     height: 1.5rem;
     width: 5rem;
-    margin-top: 1rem;
     background: #eb94d0;
     background-image: -moz-linear-gradient(top, #eb94d0, #5419b3);
     font-family: 'Courier New', Courier, monospace;
     color: antiquewhite;
     font-style: oblique;
+    margin-top: 1px;
+    display: flex;
+}
+
+.name{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.pre{
+    font-family: 'Courier New', Courier, monospace;
 }
