@@ -2,7 +2,7 @@ import ItemList from "../ItemList/ItemList";
 import React, { useEffect, useState } from "react";
 import { productos } from "../../assets/Productos/Productos";
 import { useParams } from "react-router";
-
+import "./ItemListContainer.css"
 
 
 const ItemListContainer = () => {
@@ -38,8 +38,7 @@ const ItemListContainer = () => {
 
         {(!categoria) ?
             <div>
-                <h1>Bienvenido a MyRopa</h1>
-                <h2>En Proceso...</h2>
+                <h1 className="welcome"><b>Bienvenido a MyRopa</b></h1>
             </div>
             :
             <div>

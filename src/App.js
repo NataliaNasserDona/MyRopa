@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Cart from './Components/Cart/Cart.js'
+import { CartContextProvider } from "./Context/CartContext/CartContext"
 
 
 function App() {
@@ -15,22 +16,24 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter> 
-        <header>
-        <NavBar contador={contador}>
-        </NavBar>
-      </header>
-      <main>
-        <Switch> 
-          <Route exact path='/item/:id'>
-            <ItemDetailContainer setContador={setContador} contador={contador}/>
-          </Route>
-          <Route exact path='/' component={ItemListContainer}/>  
-          <Route exact path= '/category/:categoria' component={ItemListContainer}/> 
-          <Route exact path= '/Cart' component={Cart}></Route>   
-        </Switch>
-      </main>
-      </BrowserRouter>
+      <CartContextProvider>
+        <BrowserRouter>
+          <header>
+            <NavBar contador={contador}>
+            </NavBar>
+          </header>
+          <main>
+            <Switch>
+              <Route exact path='/item/:id'>
+                <ItemDetailContainer setContador={setContador} contador={contador} />
+              </Route>
+              <Route exact path='/' component={ItemListContainer} />
+              <Route exact path='/category/:categoria' component={ItemListContainer} />
+              <Route exact path='/Cart' component={Cart}></Route>
+            </Switch>
+          </main>
+        </BrowserRouter>
+      </CartContextProvider>
     </div>
   );
 }

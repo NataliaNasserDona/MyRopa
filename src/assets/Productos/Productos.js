@@ -3,9 +3,9 @@ export const productos = [
     { id: "0001", categoria:"pantalones", precio: 1000, nombre: "JEAN CHUPIN", info:"Jean elastizado sin bolsillos, con pasacinto, botón y cierre. ", img: "https://thalassodenim.com/wp-content/uploads/2019/05/SH_THALASSO534-1.jpg" },
     { id: "0002", categoria:"pantalones", precio: 2000, nombre: "PANTALON ENGOMADO", info:"Pantalón engomado liso, chupín, tiro alto, elastizado. Sin bolsillos." , img: "https://http2.mlstatic.com/D_915332-MLA47178286037_082021-O.jpg" },
     { id: "0003", categoria:"shorts | faldas", precio: 800, nombre: "FALDA-SHORT", info:"Falda-Short de bengalina. Color verde militar. Con hebilla", img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/375/278/products/whatsapp-image-2020-11-11-at-14-21-351-fa5834e20e97dd9e0716051184529878-1024-1024.jpeg" },
-    { id: "0004", categoria:"accesorios", precio: 1000, nombre: "PILUSO", info:"Piluso rosa Cheeky. Tela de corderoy.", img: "https://static.dafiti.com.ar/p/cheeky-4707-427836-1-product.jpg" },
+    { id: "0004", categoria:"accesorios", precio: 700, nombre: "PILUSO", info:"Piluso rosa Cheeky. Tela de corderoy.", img: "https://static.dafiti.com.ar/p/cheeky-4707-427836-1-product.jpg" },
     // { id: "0005", categoria:"accesorios", precio: 1000, nombre: "MEDIAS", info:"Medias con rayas. Colores: Blancas y Negras.", img: "https://www.kikamayorista.com.ar/30641-large_default/k12305.jpg" },
-    { id: "0005", categoria:"bikinis", precio: 2000, nombre: "BIKINI", info:"Bikini de un solo hombro con argolla.", img: "https://http2.mlstatic.com/D_NQ_NP_982439-MLA46627790870_072021-O.webp" }, 
+    { id: "0005", categoria:"bikinis", precio: 1500, nombre: "BIKINI HOMBRO", info:"Bikini de un solo hombro con argolla.", img: "https://http2.mlstatic.com/D_NQ_NP_982439-MLA46627790870_072021-O.webp" }, 
     { id: "0006", categoria:"shorts | faldas", precio: 1100, nombre: "FALDA PLISADA", info:"Falda plisada negra lisa.", img: " https://http2.mlstatic.com/D_NQ_NP_659696-MLA44362064062_122020-W.jpg" },
-    { id: "0007", categoria:"shorts | faldas", precio: 2000, nombre: "SHORT NEGRO", info:"Short negro básico.", img: "    https://www.kikamayorista.com.ar/30813-large_default/k12405.jpg" } 
+    { id: "0007", categoria:"shorts | faldas", precio: 900, nombre: "SHORT NEGRO", info:"Short negro básico.", img: "    https://www.kikamayorista.com.ar/30813-large_default/k12405.jpg" } 
 ];

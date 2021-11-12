@@ -1,7 +1,9 @@
+import "./Cart.css"
+
 const Cart = ({}) => {
     return(
     <div>
-        <h5>CARRITO</h5>
+        <h1 className="titulo"><b>CARRITO</b></h1>
     </div>
     )
 }

@@ -1,5 +1,5 @@
-import './NavBar.css'
-import logot from "../../assets/img/logo.jpg"
+import "./NavBar.css"
+import logot from "../../assets/img/logonat.png"
 import CartWidget from '../CartWidget/CartWidget.js';
 import Categoria from "../../assets/Categorias/Categoria.js"
 import { NavLink, Link } from 'react-router-dom';
@@ -7,13 +7,13 @@ import { NavLink, Link } from 'react-router-dom';
 const NavmyRopa = ({ contador, setContador }) => {
 
     return <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light nav">
+        <nav className="navbar navbar-expand-sm navbar-light navStyle">
 
             <Link to={`/`} className="btn"><img src={logot} className='appLogo logo' alt='logo' /></Link>
 
             <div className="container-fluid">
-                <NavLink to={`/`} className="btn"><b>MyRopa</b></NavLink>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <NavLink to={`/`} className="btn items"><b>MyRopa</b></NavLink>
+                <div className="collapse navbar-collapse items" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <NavLink to={`/sucursales`} className="btn"><b>Sucursales</b></NavLink>
