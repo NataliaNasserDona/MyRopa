@@ -19,7 +19,7 @@ const ItemDetail = ({ ropa, setContador, contador}) => {
     const onAdd = () => {
         setContador(contador + valCarro);
         setCarro(true);
-        addItem(ropa, contador)
+        addItem(ropa, valCarro)
     }
 
     // useEffect = ( {
@@ -39,6 +39,8 @@ const ItemDetail = ({ ropa, setContador, contador}) => {
                     <div>
                         <ItemCount stock='5' setCarro={setCarro} carro={carro} valCarro={valCarro} setValCarro={setValCarro}/>
                         <button type="button" class="btn btn-outline-primary" onClick={onAdd}>Agregar al carrito</button>
+                        <div><NavLink to="/buy" type="button" class="btn btn-outline-primary" >Comprar</NavLink></div>
+                        
                     </div>
                     :
                     <div>
@@ -48,6 +50,9 @@ const ItemDetail = ({ ropa, setContador, contador}) => {
                         <NavLink to="/"><button type="button" class="btn btn-secondary btn-sm">Ir al Home</button>
                         </NavLink>
                     </div>
+                    
+
+                    
                 }
             </div>
         </div>

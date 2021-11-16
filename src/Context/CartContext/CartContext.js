@@ -6,6 +6,14 @@ export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     const [quantity, setQuantity] = useState(0)
 
+    const getTotal = () => { 
+        let total = 0;
+        cart.forEach(prod => { 
+            total = total + prod.precio * prod.quantity
+        })
+        return total;
+    };
+
     const isInCart = (itemId) => {
         let inCart = false
         inCart = cart.some((product) => product.id === itemId)
@@ -17,15 +25,13 @@ export const CartContextProvider = ({ children }) => {
         if (isInCart(item.id)) {
             const update = cart.map((prod) => {
                 if (prod.id === item.id) {
-                    const newCantidad = prod.quantity + cantidad
-                    return {
-                        ...prod,
-                        cantidad: newCantidad
-                    }
+                    let newCantidad = prod.quantity + cantidad
+                    const newProducto = {...prod, quantity: parseInt(newCantidad)}
+                    return newProducto             
                 }
                 return prod
             })
-            setCart([update])
+            setCart(update)
         } else {
             const newItem = { 'quantity': cantidad, ...item }
 
@@ -42,8 +48,10 @@ export const CartContextProvider = ({ children }) => {
         setCart([])
     }
 
+    
+
     return (
-        <CartContext.Provider value={{ addItem, removerItem, limpiarCart}}>
+        <CartContext.Provider value={{ addItem, removerItem, limpiarCart, cart, getTotal}}>
             {children}
         </CartContext.Provider>
     )

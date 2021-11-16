@@ -3,3 +3,16 @@
     /* color: #8349aa81; */
     color: #5419b3;
 }
+
+.volver{
+    font-family: 'Courier New', Courier, monospace;
+    color: #9a07be;
+}
+
+.total{
+    justify-content: right;
+    display: flex;
+    margin-right: 12rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+}

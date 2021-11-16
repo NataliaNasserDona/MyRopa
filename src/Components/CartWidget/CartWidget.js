@@ -8,7 +8,7 @@ const CartWidget = ({contador}) => {
             <Link to="/Cart">
             <img src={carro} className='tamCarro' alt='imgCarro' />
             </Link>
-            <label className="cant">{contador}</label>
+            <p className="cant">{contador}</p>
         </div>
     </>
 }

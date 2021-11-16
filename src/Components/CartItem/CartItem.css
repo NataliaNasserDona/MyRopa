@@ -1,0 +1,40 @@
+.all{
+    display: flex;
+    justify-content: center;
+    border: 5px groove #ad63df;
+    border-radius: 5px;
+    margin-left: 3rem;
+    margin-bottom: 5px;
+    align-items: center;
+    padding: 2px;
+}
+.foto{
+    max-width: 100px;
+}
+.btnBorrar{
+    max-width: 18px;
+}
+.delete{
+    display: flex;
+    justify-content: center;
+}
+.nom{
+    display: flex;
+    align-items: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+}
+.cant{
+    display: flex;
+    align-items: right;
+}
+.price{
+    display: flex;
+    align-items: right;
+}
+.tot{
+    justify-content: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    
+}
