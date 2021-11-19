@@ -31,7 +31,7 @@ const ItemListContainer = () => {
             }, [categoria])
         }
         else {
-            getDocs(query(collection(db, "products"), where("categorias", "==", categoria))).then((querySnapshot) => {
+            getDocs(query(collection(db, "products"), where("categoria", "==", categoria))).then((querySnapshot) => {
                 const produc = querySnapshot.docs.map((doc) => {
                     return { id: doc.id, ...doc.data() }
                 })
