@@ -8,7 +8,7 @@ import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Cart from './Components/Cart/Cart.js'
 import { CartContextProvider } from "./Context/CartContext/CartContext"
-
+import { getFirestore } from "@firebase/firestore";
 
 function App() {
 
@@ -39,3 +39,5 @@ function App() {
 }
 
 export default App
+
+

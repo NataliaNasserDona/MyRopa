@@ -1,32 +1,29 @@
+import { getDoc } from "@firebase/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { productos } from "../../assets/Productos/Productos";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { collection } from "@firebase/firestore";
+import { getFirestore } from "../../Firebase/index";
+import { doc } from "@firebase/firestore";
+
 
 const ItemDetailContainer = ({ setContador, contador }) => {
     const [ropa, setRopa] = useState([])
     const { id } = useParams()
 
     useEffect(() => {
-        const list = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos)
-            }, 2000)
+        const db = getFirestore();
+        getDoc(doc[db, "products", id]).then((snapshot) => {
+            const produ = {
+                id: snapshot.id, ...snapshot.data()
+            }
+            setRopa(produ);
         });
-
-list.then(list => {     //cada objeto del array de los productos
-    const newDetail = list.find(ropa => ropa.id === id)
-
-    setRopa(newDetail)
-},
-
-);
     }, [id]);
 
-
-return <>
-    <ItemDetail ropa={ropa} setContador={setContador} contador={contador} />
-</>
+    return <>
+        <ItemDetail ropa={ropa} setContador={setContador} contador={contador} />
+    </>
 
 }
 

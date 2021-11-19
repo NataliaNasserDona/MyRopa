@@ -1,19 +1,20 @@
-
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import {initializeApp} from 'firebase/app'
+import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB7S_Fyxmp1C7ZUJU430PydfDI0EsaLVLA",
-  authDomain: "moles-ecommerce.firebaseapp.com",
-  projectId: "moles-ecommerce",
-  storageBucket: "moles-ecommerce.appspot.com",
-  messagingSenderId: "850435110368",
-  appId: "1:850435110368:web:4324547d9f4886cbdd6785"
+  apiKey: "AIzaSyAcMprkWJZOuffC8-QTMVcyxst58R0vLts",
+  authDomain: "myropa-11306.firebaseapp.com",
+  projectId: "myropa-11306",
+  storageBucket: "myropa-11306.appspot.com",
+  messagingSenderId: "805966877229",
+  appId: "1:805966877229:web:000cba3aef1cb693241ea4"
 
 };
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig)
 
-export const getFirebase = () => app;
+export const getFirebase = () => {
+    return app
+}
 
-export { getFirestore };
+export {getFirestore} 

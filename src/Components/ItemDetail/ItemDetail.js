@@ -5,16 +5,17 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext/CartContext"
 
-// import { collection, getDoc } from "@firebase/firestore";
-// import { getFirestore } from "@firebase/firestore";
-// import { doc} from "@firebase/firestore";
+import { collection, getDoc } from "@firebase/firestore";
+import { getFirestore } from "@firebase/firestore";
+import { doc} from "@firebase/firestore";
 
 
 const ItemDetail = ({ ropa, setContador, contador}) => {
 
     const [carro, setCarro] = useState(false);
     const [valCarro, setValCarro] = useState(0);
-    const { addItem } = useContext(CartContext)
+    const { addItem } = useContext(CartContext); 
+    const [obj, setObj] = useState(null);
 
     const onAdd = () => {
         setContador(contador + valCarro);
@@ -25,6 +26,16 @@ const ItemDetail = ({ ropa, setContador, contador}) => {
     // useEffect = ( {
 
     // },[valCarro])
+
+    //PARA TRAER TODOS LOS ELEMENTOS DE UNA COLECCION
+    // useEffect(() => {
+    //     const db = getFirestore();
+
+    //     getDoc(collection[db, "products"]).then((snapshot) => {
+    //     setObj(snapshot.docs.map((doc) => doc.data()));
+    //     });
+    // }, []);
+
 
     return <>
         <div className="col-sm-12 row every">
@@ -50,19 +61,21 @@ const ItemDetail = ({ ropa, setContador, contador}) => {
                         <NavLink to="/"><button type="button" class="btn btn-secondary btn-sm">Ir al Home</button>
                         </NavLink>
                     </div>
-                    
-
-                    
                 }
             </div>
+            {/* {obj && 
+                obj.map((carro) => (
+                    <li key={carro.nombre}>
+                        Name: {carro.nombre} - Precio: {carro.precio}
+
+                    </li>
+                    
+                ))} */}
         </div>
     </>
 }
 
 export default ItemDetail
-
-
-
 
 
 
