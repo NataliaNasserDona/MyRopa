@@ -1,0 +1,10 @@
+.spinner{
+    color: rgba(226, 43, 195, 0.849);
+    margin-top: 1rem;
+}
+
+.cargando{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(226, 43, 195, 0.849);
+    font-size: 20px;
+}

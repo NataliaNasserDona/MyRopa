@@ -9,6 +9,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Cart from './Components/Cart/Cart.js'
 import { CartContextProvider } from "./Context/CartContext/CartContext"
 import { getFirestore } from "@firebase/firestore";
+import Buy from "./Components/Buy/Buy";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
               <Route exact path='/' component={ItemListContainer} />
               <Route exact path='/category/:categoria' component={ItemListContainer} />
               <Route exact path='/Cart' component={Cart}></Route>
+              <Route exact path='/buy' component={Buy}></Route>
             </Switch>
           </main>
         </BrowserRouter>

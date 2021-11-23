@@ -5,6 +5,8 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { collection } from "@firebase/firestore";
 import { getFirestore } from "../../Firebase/index";
 import { doc } from "@firebase/firestore";
+import Loading from "../Loading/Loading"
+import Cart from "../Cart/Cart"
 
 
 const ItemDetailContainer = ({ setContador, contador }) => {
@@ -13,13 +15,17 @@ const ItemDetailContainer = ({ setContador, contador }) => {
 
     useEffect(() => {
         const db = getFirestore();
-        getDoc(doc[db, "products", id]).then((snapshot) => {
+        getDoc(doc(db, "products", id)).then((snapshot) => {
             const produ = {
                 id: snapshot.id, ...snapshot.data()
             }
             setRopa(produ);
         });
     }, [id]);
+
+    if(ropa.length === 0){
+        return (<Loading/>)
+    }
 
     return <>
         <ItemDetail ropa={ropa} setContador={setContador} contador={contador} />

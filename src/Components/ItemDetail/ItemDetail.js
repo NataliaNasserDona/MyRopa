@@ -5,37 +5,18 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext/CartContext"
 
-import { collection, getDoc } from "@firebase/firestore";
-import { getFirestore } from "@firebase/firestore";
-import { doc} from "@firebase/firestore";
-
 
 const ItemDetail = ({ ropa, setContador, contador}) => {
 
     const [carro, setCarro] = useState(false);
     const [valCarro, setValCarro] = useState(0);
     const { addItem } = useContext(CartContext); 
-    const [obj, setObj] = useState(null);
 
     const onAdd = () => {
         setContador(contador + valCarro);
         setCarro(true);
         addItem(ropa, valCarro)
     }
-
-    // useEffect = ( {
-
-    // },[valCarro])
-
-    //PARA TRAER TODOS LOS ELEMENTOS DE UNA COLECCION
-    // useEffect(() => {
-    //     const db = getFirestore();
-
-    //     getDoc(collection[db, "products"]).then((snapshot) => {
-    //     setObj(snapshot.docs.map((doc) => doc.data()));
-    //     });
-    // }, []);
-
 
     return <>
         <div className="col-sm-12 row every">
@@ -50,7 +31,6 @@ const ItemDetail = ({ ropa, setContador, contador}) => {
                     <div>
                         <ItemCount stock='5' setCarro={setCarro} carro={carro} valCarro={valCarro} setValCarro={setValCarro}/>
                         <button type="button" class="btn btn-outline-primary" onClick={onAdd}>Agregar al carrito</button>
-                        <div><NavLink to="/buy" type="button" class="btn btn-outline-primary" >Comprar</NavLink></div>
                         
                     </div>
                     :
@@ -63,40 +43,8 @@ const ItemDetail = ({ ropa, setContador, contador}) => {
                     </div>
                 }
             </div>
-            {/* {obj && 
-                obj.map((carro) => (
-                    <li key={carro.nombre}>
-                        Name: {carro.nombre} - Precio: {carro.precio}
-
-                    </li>
-                    
-                ))} */}
         </div>
     </>
 }
 
 export default ItemDetail
-
-
-
-
-//PARA TRAER UN SOLO ELEMENTO DE LA COLECCION
-    // useEffect(() => {
-    //     const db = getFirestore();
-
-    //     const pilusoRef = doc(db, "items", "productos");
-    //     getDoc(pilusoRef).then(snapshot);
-    //     if(snapshot.exist){
-    //         setCarro(snapshot.data())
-    //     }
-    // }, [productos]);
-
-
-    //PARA TRAER TODOS LOS ELEMENTOS DE UNA COLECCION
-    // useEffect(() => {
-    //     const db = getFirestore();
-
-    //     getDoc(db, "items", "productos").then(snapshot);
-    //     setCarro(snapshot.docs.map((doc) => doc.data()));
-    //     
-    // }, []);
