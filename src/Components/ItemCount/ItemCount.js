@@ -1,5 +1,7 @@
 import "./ItemCount.css"
-import React, {useState} from 'react';
+import mas from "../../assets/img/mas.png"
+import menos from "../../assets/img/menos.png"
+import React from 'react';
 
 const ItemCount = ({stock, valCarro, setValCarro}) => {
     
@@ -14,14 +16,13 @@ const ItemCount = ({stock, valCarro, setValCarro}) => {
     return <>
         <div className="container centrar col-sm-4 pad">
             <div className="row col-sm-12 fa">
-                <button type="button" className="btn btn-outline-info col-sm-2" onClick={resta}> - </button>
+                <img src={menos} className="col-sm-2 botones" onClick={resta} alt="signo +"/>
                 <h2 className="col-sm-6">{valCarro}</h2>
-                <button type="button" className="btn btn-outline-info col-sm-2" onClick={suma}> + </button>
+                <img src={mas} className="col-sm-2 botones" onClick={suma} alt="signo -"/>
             </div>
             
         </div>
     </>;
-
 }
 
 export default ItemCount;

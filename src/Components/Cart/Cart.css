@@ -3,16 +3,33 @@
     /* color: #8349aa81; */
     color: #5419b3;
 }
-
 .volver{
     font-family: 'Courier New', Courier, monospace;
     color: #9a07be;
 }
-
 .total{
     justify-content: right;
     display: flex;
     margin-right: 12rem;
     font-family: 'Courier New', Courier, monospace;
     font-size: 23px;
+}
+.styleEnvio{
+    display: flex;
+    justify-content: space-between;
+}
+.btns{
+    background: #eb94d0;
+    background-image: -moz-linear-gradient(top, #eb94d0, #5419b3);
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
+    font-style: oblique;
+    margin-top: 1rem;
+    max-height: 5rem; 
+}
+.btnTermCompra{
+    margin-right: 60px;
+}
+.datosEnvio{
+    margin-left: 60px;
 }

@@ -2,12 +2,9 @@ import { getDoc } from "@firebase/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { collection } from "@firebase/firestore";
 import { getFirestore } from "../../Firebase/index";
 import { doc } from "@firebase/firestore";
 import Loading from "../Loading/Loading"
-import Cart from "../Cart/Cart"
-
 
 const ItemDetailContainer = ({ setContador, contador }) => {
     const [ropa, setRopa] = useState([])
@@ -30,7 +27,6 @@ const ItemDetailContainer = ({ setContador, contador }) => {
     return <>
         <ItemDetail ropa={ropa} setContador={setContador} contador={contador} />
     </>
-
 }
 
 export default ItemDetailContainer

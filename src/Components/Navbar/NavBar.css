@@ -2,7 +2,6 @@
     max-width: 70px;
     max-height: 70px;
 }
-
 .navStyle{
     display: flex;
     width: 100%;
@@ -15,18 +14,15 @@
     background-color: #b477dd;
     border: 5px groove #ad63df;
 }
-
 .buscar{
     text-align: right;
 }
-
 .itemsMenu{
     font-style: oblique;
     background-color: #c89fe4;
     border: 5px groove #ad63df;
     border-radius: 5px;
 }
-
 .items{
     font-family: 'Courier New', Courier, monospace;
 }

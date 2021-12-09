@@ -1,18 +1,22 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext/CartContext"
-
+import  NotificationContext  from "../../Context/NotificationContext/NotificationContext"
 
 const ItemDetail = ({ ropa, setContador, contador}) => {
 
     const [carro, setCarro] = useState(false);
-    const [valCarro, setValCarro] = useState(0);
+    const [valCarro, setValCarro] = useState(1);
     const { addItem } = useContext(CartContext); 
+    const {setNotification} = useContext(NotificationContext);
 
     const onAdd = () => {
+        if(valCarro === 0) {
+            return setNotification("No se pueden cargar 0 productos.", 2000)
+        }
         setContador(contador + valCarro);
         setCarro(true);
         addItem(ropa, valCarro)
@@ -27,6 +31,7 @@ const ItemDetail = ({ ropa, setContador, contador}) => {
                 <h5 className="card-title nombre"><b>{ropa?.nombre}</b></h5>
                 <p className="card-text info">{ropa?.info}</p>
                 <p className="card-text precio"><b>Precio: </b> ${ropa?.precio}</p>
+                <p>Stock: {ropa?.stock}</p>
                 {!carro ?
                     <div>
                         <ItemCount stock='5' setCarro={setCarro} carro={carro} valCarro={valCarro} setValCarro={setValCarro}/>

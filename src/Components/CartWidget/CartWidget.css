@@ -1,7 +1,6 @@
 .tamCarro{
     width: 30px;
 }
-
 .posicion{
     display: flex;
     justify-content: center;
@@ -9,11 +8,6 @@
     width: 70px;
     height: 70px;
 }
-
-/* .precio{
-    padding-right: 0.5rem;
-} */
-
 .cant{
     padding-left: 0.5rem;
     padding-right: 1rem;

@@ -1,0 +1,26 @@
+.frm{
+    justify-content: center;
+    display: flex;
+}
+.btnGuardar{
+    background: #eb94d0;
+    background-image: -moz-linear-gradient(top, #eb94d0, #5419b3);
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
+    font-style: oblique;
+    margin-top: 1rem;
+    max-height: 5rem; 
+}
+.p{
+    font-family: 'Courier New', Courier, monospace;
+}
+.marginGral{
+    margin-bottom: 2rem;
+}
+
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button 
+{   -webkit-appearance: none;   margin: 0; }  
+input[type=number] 
+{   -moz-appearance: textfield; }
+

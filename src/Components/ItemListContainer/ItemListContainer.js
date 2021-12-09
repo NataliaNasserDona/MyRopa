@@ -47,7 +47,6 @@ const ItemListContainer = () => {
     }
 
     return (<>
-
         {(!categoria) ?
             <div>
                 <h1 className="welcome"><b>Bienvenido a MyRopa</b></h1>

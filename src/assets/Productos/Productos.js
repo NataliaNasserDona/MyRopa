@@ -11,5 +11,4 @@ export const productos = [
     { id: "0009", categoria:"remeras | tops", precio: 1200, nombre: "CROP TOP", info:"Crop Top con cullo de tortuga, mangas anchas y elástico inferior.", img: "https://i.pinimg.com/564x/a8/a4/b3/a8a4b3015ae3d3c7f663631cb369b015.jpg" },
     { id: "0010", categoria:"bikinis", precio: 2150, nombre: "BIKINI ROJO", info:"Bikini rojo con parte inferior tiro alto.", img: "https://i.pinimg.com/564x/21/64/fb/2164fb6e516aefa3043e7bbfa4c7ee43.jpg" },
     { id: "0011", categoria:"remeras | tops", precio: 1150, nombre: "TOP MUSCULOSA", info:"Crop Top musculosa con cuello redondo.", img: "https://i.pinimg.com/564x/39/5b/b7/395bb794ceb90a25c8f6e0fc8664be48.jpg" }
-
 ];
