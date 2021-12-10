@@ -9,6 +9,7 @@
 
 ## GIF
 
+El despliegue del sitio se realizó en VERCEL, [ir al sitio](https://myropa.vercel.app/).
 ![Gif](https://media.giphy.com/media/xWH7KEq4EQA3oofnsT/giphy.gif)
 
 
